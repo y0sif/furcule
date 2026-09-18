@@ -1,0 +1,17 @@
+# User unit: keep the Furcule board running for a graphs directory.
+#   mkdir -p ~/.config/systemd/user && cp furcule.service ~/.config/systemd/user/
+#   systemctl --user enable --now furcule
+[Unit]
+Description=Furcule reasoning graph board
+After=network.target
+
+[Service]
+ExecStart=%h/.local/bin/furcule serve %h/furcule-graphs
+Environment=RUST_LOG=info
+Environment=FURCULE_BIND=127.0.0.1
+Environment=FURCULE_PORT=7429
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

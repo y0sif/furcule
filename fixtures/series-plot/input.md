@@ -1,0 +1,5 @@
+# Harbor Lights, season one, through episode six
+
+Recap. Three warehouses on the Marrow Street pier burned in the space of two months. All three were leased by Cullen Freight, a company that turns out to be a shell owned by Petra Vance, the mayor's sister-in-law. Fire investigator Ruth Adeyemi found the same accelerant pattern at the first two sites. Before she could examine the third, Mayor Holloway's office reassigned her and closed the pier for "structural review". Journalist Sam Okafor obtained insurance filings showing Cullen Freight was paid out on all three fires. In episode two a photograph from the second fire shows an unidentified woman watching from the pier gate. In episode five the harbour master's logbook for the nights of the fires is reported missing.
+
+The viewer's prediction for the finale. The mayor ordered the fires. He controls the pier through his sister-in-law's shell, he collected the insurance money through her, and he shut down the investigation the moment it got close. The woman in the photograph is Petra Vance. The logbook was taken by the mayor's office.

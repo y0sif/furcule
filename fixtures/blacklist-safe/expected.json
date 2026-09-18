@@ -1,0 +1,23 @@
+{
+  "case": "blacklist-safe",
+  "must_extract": [
+    { "kind": "fact", "keywords": ["box", "gone"] },
+    { "kind": "fact", "keywords": ["two people", "open"] },
+    { "kind": "fact", "keywords": ["Kaplan", "dead"] },
+    { "kind": "fact", "keywords": ["no", "forced entry"] },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["open", "safe"], "why": "the whole argument needs: the only way to the recordings is to open the safe" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["same safe"], "why": "that the safe in the wall is the original safe is never established" },
+    { "kind": "inference", "keywords": ["Kaplan", "means"] },
+    { "kind": "inference", "keywords": ["close to Kaplan"] },
+    { "kind": "entity", "keywords": ["specialist"] }
+  ],
+  "negation": {
+    "target": { "kind": "assumption", "keywords": ["open", "safe"] },
+    "must_fall": [["Kaplan", "means"], ["close to Kaplan"]],
+    "must_stand": [["box", "gone"], ["no", "forced entry"]]
+  },
+  "gaps": [
+    { "keywords": ["specialist"] },
+    { "keywords": ["replica"] }
+  ]
+}

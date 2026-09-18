@@ -1,0 +1,21 @@
+{
+  "case": "kan-paper",
+  "must_extract": [
+    { "kind": "fact", "keywords": ["97.86"] },
+    { "kind": "fact", "keywords": ["14.3"] },
+    { "kind": "inference", "keywords": ["infrastructure", "chess engine"] },
+    { "kind": "inference", "keywords": ["learnable activations", "visual"] },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["spline", "inference"], "why": "the engine conclusion rests on KAN needing runtime spline evaluation; table-based quantisation is never considered" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["accuracy", "activation"], "why": "the vision gain is attributed to learnable activations without controlling for parameter count" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["chess", "represent"], "why": "that chess results generalise to other domains is stated as guidance" }
+  ],
+  "negation": {
+    "target": { "kind": "assumption", "keywords": ["spline", "inference"] },
+    "must_fall": [["infrastructure", "chess engine"]],
+    "must_stand": [["97.86"], ["14.3"]]
+  },
+  "gaps": [
+    { "keywords": ["quantis"] },
+    { "keywords": ["parameter", "match"] }
+  ]
+}

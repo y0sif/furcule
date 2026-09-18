@@ -1,0 +1,28 @@
+{
+  "case": "lawsuit",
+  "must_extract": [
+    { "kind": "entity", "keywords": ["Northline"] },
+    { "kind": "entity", "keywords": ["Harlan"] },
+    { "kind": "entity", "keywords": ["Teague"] },
+    { "kind": "fact", "keywords": ["five-year", "warranty"] },
+    { "kind": "fact", "keywords": ["collapsed"] },
+    { "kind": "fact", "keywords": ["hot tub"] },
+    { "kind": "fact", "keywords": ["lag bolts", "short"] },
+    { "kind": "fact", "keywords": ["county", "no permit"] },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["construction", "cause"], "why": "the report finds a defect but never analyses whether the hot tub load, not the defect, caused the pull-away" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["warranty", "modif"], "why": "that the warranty survives a later structural modification by another contractor is assumed" },
+    { "kind": "inference", "keywords": ["Northline", "liable"] }
+  ],
+  "negation": {
+    "target": { "kind": "assumption", "keywords": ["construction", "cause"] },
+    "must_fall": [["Northline", "liable"]],
+    "must_stand": [["collapsed"], ["lag bolts", "short"]]
+  },
+  "contradictions": [
+    [["Teague", "permit"], ["county", "no permit"]]
+  ],
+  "gaps": [
+    { "keywords": ["load"] },
+    { "keywords": ["warranty", "modif"] }
+  ]
+}

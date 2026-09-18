@@ -1,0 +1,15 @@
+{
+  "name": "furcule",
+  "version": "0.1.0",
+  "description": "Assumption-first reasoning graph. npm wrapper that installs the furcule binary so `npx furcule mcp` works in MCP configs.",
+  "license": "MIT",
+  "repository": "github:y0sif/furcule",
+  "homepage": "https://github.com/y0sif/furcule",
+  "keywords": ["reasoning", "argument-map", "assumptions", "knowledge-graph", "mcp", "mcp-server"],
+  "bin": { "furcule": "bin/furcule.js" },
+  "files": ["bin", "install.js"],
+  "type": "module",
+  "scripts": { "postinstall": "node install.js" },
+  "os": ["linux", "darwin", "win32"],
+  "cpu": ["x64", "arm64"]
+}

@@ -1,0 +1,28 @@
+{
+  "case": "series-plot",
+  "must_extract": [
+    { "kind": "entity", "keywords": ["Holloway"] },
+    { "kind": "entity", "keywords": ["Petra Vance"] },
+    { "kind": "entity", "keywords": ["Cullen Freight"] },
+    { "kind": "entity", "keywords": ["Adeyemi"] },
+    { "kind": "fact", "keywords": ["three warehouses", "burned"] },
+    { "kind": "fact", "keywords": ["shell", "sister-in-law"] },
+    { "kind": "fact", "keywords": ["reassigned"] },
+    { "kind": "fact", "keywords": ["insurance", "paid"] },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["mayor", "knew"], "why": "that the mayor knew who owned the shell is never shown" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["protect", "himself"], "why": "shutting the investigation could protect his sister-in-law, not himself" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["third", "same"], "why": "only two fires share the accelerant pattern" },
+    { "kind": "inference", "keywords": ["mayor", "ordered"] },
+    { "kind": "inference", "keywords": ["photograph", "Petra"] }
+  ],
+  "negation": {
+    "target": { "kind": "assumption", "keywords": ["mayor", "knew"] },
+    "must_fall": [["mayor", "ordered"]],
+    "must_stand": [["insurance", "paid"], ["reassigned"]]
+  },
+  "gaps": [
+    { "keywords": ["logbook"] },
+    { "keywords": ["woman", "photograph"] },
+    { "keywords": ["third", "accelerant"] }
+  ]
+}

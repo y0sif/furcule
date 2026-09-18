@@ -1,0 +1,25 @@
+{
+  "case": "detective-case",
+  "must_extract": [
+    { "kind": "entity", "keywords": ["Malik"] },
+    { "kind": "entity", "keywords": ["Dana"] },
+    { "kind": "entity", "keywords": ["Ollie"] },
+    { "kind": "entity", "keywords": ["Pryce"] },
+    { "kind": "fact", "keywords": ["only key"] },
+    { "kind": "fact", "keywords": ["padlock", "intact"] },
+    { "kind": "fact", "keywords": ["Ollie", "bag"] },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["box", "inside", "locked"], "why": "Dana saw it at 3:50, the tent was locked at 4:00; the ten minutes are unaccounted for" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["padlock", "only way"], "why": "a canvas tent has more ways in than its padlock" },
+    { "kind": "inference", "keywords": ["Malik", "took"] }
+  ],
+  "negation": {
+    "target": { "kind": "assumption", "keywords": ["padlock", "only way"] },
+    "must_fall": [["Malik", "took"]],
+    "must_stand": [["only key"], ["padlock", "intact"]]
+  },
+  "gaps": [
+    { "keywords": ["rear canvas"] },
+    { "keywords": ["3:50", "4:00"] },
+    { "keywords": ["Dana"] }
+  ]
+}

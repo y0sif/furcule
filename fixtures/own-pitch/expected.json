@@ -1,0 +1,21 @@
+{
+  "case": "own-pitch",
+  "must_extract": [
+    { "kind": "fact", "keywords": ["graphify", "codebases"] },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["identify", "assumptions"], "why": "the pitch assumes an agent can reliably find the unstated assumptions in text" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["graph", "better", "text"], "why": "that a graph beats a block of text, or a chat answer, for this purpose is asserted, not shown" },
+    { "kind": "assumption", "provenance": "extracted", "keywords": ["root", "directional"], "why": "stated as a belief about ideas in general" },
+    { "kind": "assumption", "provenance": "inferred", "keywords": ["contradict", "natural language"], "why": "that natural-language conclusions can be formally contradicted is assumed" },
+    { "kind": "inference", "keywords": ["better conclusion"] },
+    { "kind": "inference", "keywords": ["generalize"] }
+  ],
+  "negation": {
+    "target": { "kind": "assumption", "keywords": ["identify", "assumptions"] },
+    "must_fall": [["better conclusion"]],
+    "must_stand": [["graphify", "codebases"]]
+  },
+  "gaps": [
+    { "keywords": ["chat"] },
+    { "keywords": ["formal"] }
+  ]
+}

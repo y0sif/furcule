@@ -1,0 +1,38 @@
+# Maintainer: y0sif <yosif@outbond.io>
+pkgname=furcule
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Assumption-first reasoning graph: negate an assumption, see what falls, branch and diff"
+arch=('x86_64' 'aarch64')
+url="https://github.com/y0sif/furcule"
+license=('MIT')
+depends=('gcc-libs')
+makedepends=('cargo' 'pnpm' 'nodejs')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+prepare() {
+  cd "$pkgname-$pkgver"
+  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+  (cd viewer && pnpm install --frozen-lockfile)
+}
+
+build() {
+  cd "$pkgname-$pkgver"
+  (cd viewer && pnpm build)
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
+  cargo build --frozen --release -p furcule
+}
+
+check() {
+  cd "$pkgname-$pkgver"
+  cargo test --frozen --workspace
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+}
