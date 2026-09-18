@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" role="img" aria-label="Furcule">
+  <rect width="640" height="160" rx="28" fill="#141210"/>
+  <g transform="translate(24 8) scale(0.5625)">
+    <g fill="none" stroke="#E8A33D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M128 216 V132"/>
+      <path d="M128 132 C128 96 96 84 72 56"/>
+      <path d="M128 132 C128 96 160 84 184 56"/>
+    </g>
+    <circle cx="128" cy="132" r="18" fill="#141210" stroke="#E8A33D" stroke-width="12"/>
+  </g>
+  <text x="190" y="104" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="84" font-weight="600" letter-spacing="-2" fill="#F2EDE4">furcule</text>
+</svg>

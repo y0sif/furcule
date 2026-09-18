@@ -22,3 +22,7 @@ viewer/.vite/
 # Tooling output
 graphify-out/
 coverage/
+
+# Internal maintainer docs, not published
+docs/BRAND.md
+docs/DESIGN.md

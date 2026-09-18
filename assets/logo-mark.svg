@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Furcule">
+  <rect width="256" height="256" rx="56" fill="#141210"/>
+  <g fill="none" stroke="#E8A33D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 216 V132"/>
+    <path d="M128 132 C128 96 96 84 72 56"/>
+    <path d="M128 132 C128 96 160 84 184 56"/>
+  </g>
+  <circle cx="128" cy="132" r="18" fill="#141210" stroke="#E8A33D" stroke-width="12"/>
+</svg>
