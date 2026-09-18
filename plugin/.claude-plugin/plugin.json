@@ -1,0 +1,10 @@
+{
+  "name": "furcule",
+  "description": "Assumption-first reasoning graphs: extract facts, assumptions and conclusions from any text, negate an assumption and see what falls, branch and diff.",
+  "version": "0.1.0",
+  "author": { "name": "y0sif", "url": "https://github.com/y0sif" },
+  "homepage": "https://github.com/y0sif/furcule",
+  "repository": "https://github.com/y0sif/furcule",
+  "license": "MIT",
+  "keywords": ["reasoning", "argument-map", "assumptions", "graph", "mcp"]
+}

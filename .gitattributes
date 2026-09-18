@@ -1,0 +1,7 @@
+* text=auto eol=lf
+Cargo.lock linguist-generated merge=binary
+pnpm-lock.yaml linguist-generated merge=binary
+docs/naming-candidates-raw.txt linguist-generated
+assets/** binary
+*.png binary
+*.gif binary

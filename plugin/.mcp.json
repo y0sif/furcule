@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "furcule": {
+      "command": "furcule",
+      "args": ["mcp"]
+    }
+  }
+}

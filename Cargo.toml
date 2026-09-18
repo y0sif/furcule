@@ -1,0 +1,60 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/furcule-core",
+    "crates/furcule-mcp",
+    "crates/furcule-server",
+    "crates/furcule",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["y0sif <yosif@outbond.io>"]
+repository = "https://github.com/y0sif/furcule"
+homepage = "https://github.com/y0sif/furcule"
+readme = "README.md"
+keywords = ["reasoning", "argument-map", "assumptions", "knowledge-graph", "mcp"]
+categories = ["command-line-utilities", "visualization", "science"]
+
+[workspace.dependencies]
+furcule-core = { path = "crates/furcule-core", version = "0.1.0" }
+furcule-mcp = { path = "crates/furcule-mcp", version = "0.1.0" }
+furcule-server = { path = "crates/furcule-server", version = "0.1.0" }
+
+anyhow = "1.0"
+axum = "0.8"
+camino = { version = "1.2", features = ["serde1"] }
+clap = { version = "4.6", features = ["derive", "env"] }
+indexmap = { version = "2.14", features = ["serde"] }
+jiff = { version = "0.2", features = ["serde"] }
+petgraph = "0.8"
+rmcp = { version = "3.4", features = ["server", "transport-io"] }
+rust-embed = "8.12"
+schemars = { version = "1.2", features = ["indexmap2"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+thiserror = "2.0"
+tokio = { version = "1.53", features = ["rt-multi-thread", "macros", "signal", "fs", "io-std"] }
+tower-http = { version = "0.7", features = ["cors", "trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uuid = { version = "1.26", features = ["v7", "serde"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
