@@ -1,0 +1,30 @@
+name: Fixture proposal
+description: A real text with a hidden assumption that Furcule should handle.
+labels: ["fixture"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Where the text comes from
+      placeholder: a paper, a case summary, a plot recap, your own idea dump
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: The text, or a link to it
+    validations:
+      required: true
+  - type: textarea
+    id: assumption
+    attributes:
+      label: The hidden assumption, and what should fall when it is negated
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights
+      options:
+        - label: The text can be included in this repository under MIT, or I have linked to it instead.
+          required: true

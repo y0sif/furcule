@@ -1,0 +1,67 @@
+name: Bug report
+description: Something is wrong in the engine, the MCP server, the viewer or the CLI.
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - furcule-core (schema, standing, branches, diff, checks)
+        - furcule-mcp (MCP tools, prompts, transports)
+        - furcule-server (HTTP API, SSE)
+        - viewer (the board)
+        - CLI
+        - plugin (Claude Code plugin or skill)
+        - packaging (crates.io, npm, AUR, Homebrew)
+        - docs
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands or MCP calls. A minimal graph directory helps a lot.
+      placeholder: |
+        1. furcule extract idea.md --out idea/
+        2. furcule negate idea/ a3
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent driving Furcule, if any
+      options:
+        - none, CLI only
+        - Claude Code
+        - OpenCode
+        - Claude.ai connector
+        - ChatGPT
+        - other
+  - type: input
+    id: version
+    attributes:
+      label: furcule --version
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and how you installed
+      placeholder: Arch Linux, cargo install
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Run with `RUST_LOG=debug` and paste stderr.
+      render: shell
