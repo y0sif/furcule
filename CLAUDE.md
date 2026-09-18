@@ -30,7 +30,7 @@ pnpm build && pnpm lint && pnpm format:check
 - `viewer/`: Vite + React + React Flow. Types are generated from `furcule schema`, never hand-written.
 - `fixtures/`: one directory per real use case, each with `input.md` and `expected.json`.
 - `plugin/`: Claude Code plugin (`.claude-plugin/plugin.json`, `.mcp.json`, `skills/`).
-- `docs/`: `landscape.md` (Phase 0), `naming.md` (decided: Furcule), architecture and schema docs.
+- `docs/`: `landscape.md` (Phase 0), `naming.md` (decided: Furcule), `architecture.md`, `schema.md`, `tech-stack.md`, `comparison.md`, `faq.md`. Also `docs/BRAND.md` and `docs/DESIGN.md`: maintainer-only, git-ignored, present on the maintainer's machine; read them when they exist before touching copy or the viewer's look.
 
 ## Conventions
 
