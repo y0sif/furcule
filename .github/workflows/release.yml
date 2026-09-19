@@ -24,11 +24,11 @@ jobs:
           - { os: windows-latest,    target: x86_64-pc-windows-msvc,    archive: zip }
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           package_json_file: viewer/package.json
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -62,7 +62,7 @@ jobs:
           Copy-Item "target/${{ matrix.target }}/release/furcule.exe", "README.md", "LICENSE" -Destination "dist/$name/"
           Compress-Archive -Path "dist/$name" -DestinationPath "dist/$name.zip"
           (Get-FileHash "dist/$name.zip" -Algorithm SHA256).Hash + "  $name.zip" | Out-File -Encoding ascii "dist/$name.zip.sha256"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.target }}
           path: dist/*.{tar.gz,zip,sha256}
@@ -73,11 +73,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: artifacts
           merge-multiple: true
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: artifacts/*
           generate_release_notes: true
